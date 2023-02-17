@@ -6,146 +6,134 @@
 -->
 <html>
 	<head>
+		<a id="Contact me"></a>
 		<title>Juls Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			/* Popup box styles */
-			.popup-box {
-				position: fixed;
-				top: 0;
-				left: 0;
-				height: 100vh;
-				width: 100vw;
-				background-color: rgba(0, 0, 0, 0.8);
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				overflow: hidden;
-			}
-
-			.popup-box img {
-				max-height: 90vh;
-				max-width: 90vw;
-			}
-
-			.popup-box-close {
-				position: absolute;
-				top: 10px;
-				right: 10px;
-				font-size: 32px;
-				color: #fff;
-				cursor: pointer;
-			}
-
-            /* Text box styles */
-            .text-box {
-                position: absolute;
-                right: 0;
-                top: 0;
-                height: 100%;
-                width: 40%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 2em;
-                color: #fff;
-            }
-
-            /* Image container styles */
-            .image-container {
-                position: relative;
-            }
-
-            .image-container .text-box {
-                display: none;
-            }
-
-            .image-container:hover .text-box {
-                display: block;
-            }
-		</style>
 	</head>
 	<body>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="image-container">
-						<a href="#popup1">
-							<img src="images/fulls/juzo_pic.png" alt="Thumbnail 1" />
-						</a>
-						<div id="popup1" class="popup-box">
-							<img src="images/thumbs/Archimboldi Pharao.png" alt="Image 1" />
-							<div class="hallo?">
-								<h2>Archimboldi</h2>
-								<p>This is a description of Image 1.</p>
-							</div>
-							<a class="popup-box-close" href="#">&times;</a>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				
+					<header id="header">
+						
+						<span class="avatar"><img src="images/profile2.png" alt="" /></span>
+						<h1> <strong> Julia Heidrich - 3D Artist</strong></h1> <h2><p> Blender - Substance Painter - Photoshop - Unreal Engine - Unity</h2>
+						
+						<ul class="icons">
+							<li><a href="https://www.youtube.com/playlist?list=PLznTkZPZWx10cyj4QgZ2x5SCgyYMx1Pw4" class="icon style2 fa-youtube"><span class="label">Youtube</span></a></li>
+							<li><a href="#About-me" class="icon style2 fa-500px"><span class="label">About me</span></a></li>
+							<li><a href="#Contact-me" class="icon style2 fa-envelope-o"><span class="label">Contact</span></a></li>	
+							
+							 
+						</ul>
+						<p><p><p>
+						
+						<p>
+							
+					</header>
+
+				<!-- Main -->
+					<section id="main">
+
+						<!-- Thumbnails -->
+							<section class="thumbnails">
+								<div>
+									
+									<div class="box">
+										<a href="images/fulls/parasaurolophus2.png" class="image fit"><img src="images/thumbs/parasaurolophus.png"> </a>
+										<div class="inner">
+											<h3>Parasaurolophus</h3>
+											<p>A Parasaurolophus to go on hikes with. Sculpted/Modelled in Blender</p>
+											<a href="https://youtu.be/TQv14uZc7g4" class="button fit" data-poptrox="youtube,1000x600">Watch</a>
+										</div>
+									</div>	
+
+								</div>
+
+								<div>
+
+									<div class="box">
+										<a href="images/fulls/tree2.png" class="image fit"><img src="images/thumbs/tree.png"> </a>
+										<div class="inner">
+											<h3>Bench under Tree</h3>
+											<p>A simple bench with flowers under a wheeping willow. Modells built, textured and rendered in Blender.</p>
+										</div>
+									</div>
+																	
+								</div>
+
+								<div>
+								
+									<div class="box">
+										<a href="images/fulls/bachelor.png" class="image fit"><img src="images/thumbs/bachelor.png"> </a>
+										<div class="inner">
+											<h3>Leaving Earth behind - VR Experience</h3>
+											<p>Bachelors project - We explore four civilisations on the Trappist-1 planetary system. Built in Unreal Engine 4, Blender and Substance Painter.</p>
+											<a href="https://youtu.be/KnPU3Y14yak" class="button fit" data-poptrox="youtube,1000x600">Gameplay</a>
+										</div>
+									</div>
+
+								</div>
+
+								
+								</section>
+
+
+
+					</section>
+
+					
+
+				<!-- Footer -->
+				
+				<a id="About-me"></a> 
+
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#Contact me" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
+						<div><a href="#Contact me">
+							<h1>About me</h1> 
+							</a>
 						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="image-container">
-						<a href="#popup2">
-							<img src="images/fulls/bachelor.png" alt="Thumbnail 2" />
-						</a>
-						<div id="popup2" class="popup-box">
-							<img src="images/thumbs/Gladiator.png" alt="Image 2" />
-							<div class="text-box">
-								<h2>Hallo2</h2>
-								<p>Gladiator.</p>
+						 
+					</ul>
+				
+				
+					<h2> <p>Hi! <p>I'm a passionate 3D Artist. <p> I love telling stories especially through visuals.<p> For more details check out my Youtube page, linked above.<p> More projects are in the making, so don't hesitate to come back. <p> Thank you <3 </h2>
+
+				</footer>
+
+
+				
+				<a id="Contact-me"></a> 
+
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#Contact me" class="icon style2 fa-envelope-o"><span class="label">Kontact</span></a></li>
+							<div><a href="#Contact me">
+								<h1>Contact me</h1> 
+								</a>
 							</div>
-							<a class="popup-box-close" href="#">&times;</a>
-						</div>
-					</div>
-				</div>
+							 
+						</ul>
+					
+					
+						<p><h2>Juls <p> Germany </h2>
+
+					</footer>
+
 			</div>
-		</div>
-		<script>
-		
-		// Show popup with large image
-function showPopup(imageSrc) {
-	// Get the popup element
-	const popup = document.querySelector('.popup-box');
-	// Get the image element inside the popup
-	const popupImage = popup.querySelector('img');
-	// Set the source of the image to the clicked thumbnail's source
-	popupImage.src = imageSrc;
-	// Show the popup
-	if (popup !== null) {
-		popup.style.display = 'flex';
-	}
-}
 
-// Hide popup
-function hidePopup() {
-	// Get the popup element
-	const popup = document.querySelector('.popup-box');
-	// Hide the popup
-	if (popup !== null) {
-		popup.style.display = 'none';
-	}
-}
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/main.js"></script>
 
-// Attach click event listeners to all thumbnail images
-const thumbnailImages = document.querySelectorAll('.image-container img');
-for (let i = 0; i < thumbnailImages.length; i++) {
-	thumbnailImages[i].addEventListener('click', function() {
-		// Get the source of the clicked thumbnail
-		const imageSrc = this.getAttribute('src');
-		// Show the popup with the clicked thumbnail's image
-		showPopup(imageSrc);
-	});
-}
-
-// Attach click event listener to popup close button
-const popupCloseButton = document.querySelector('.popup-box-close');
-popupCloseButton.addEventListener('click', function(event) {
-	// Hide the popup
-	hidePopup();
-});
-
-	</script>
-</body>
+	</body>
 </html>
