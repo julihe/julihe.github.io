@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<!--
+	Visualize by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Juls Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Popup box styles */
+			.popup-box {
+				position: fixed;
+				top: 0;
+				left: 0;
+				height: 100vh;
+				width: 100vw;
+				background-color: rgba(0, 0, 0, 0.8);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+			}
+
+			.popup-box img {
+				max-height: 90vh;
+				max-width: 90vw;
+			}
+
+			.popup-box-close {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				font-size: 32px;
+				color: #fff;
+				cursor: pointer;
+			}
+
+            /* Text box styles */
+            .text-box {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2em;
+                color: #fff;
+            }
+
+            /* Image container styles */
+            .image-container {
+                position: relative;
+            }
+
+            .image-container .text-box {
+                display: none;
+            }
+
+            .image-container:hover .text-box {
+                display: block;
+            }
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="image-container">
+						<a href="#popup1">
+							<img src="images/fulls/juzo_pic.png" alt="Thumbnail 1" />
+						</a>
+						<div id="popup1" class="popup-box">
+							<img src="images/thumbs/Archimboldi Pharao.png" alt="Image 1" />
+							<div class="hallo?">
+								<h2>Archimboldi</h2>
+								<p>This is a description of Image 1.</p>
+							</div>
+							<a class="popup-box-close" href="#">&times;</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="image-container">
+						<a href="#popup2">
+							<img src="images/fulls/bachelor.png" alt="Thumbnail 2" />
+						</a>
+						<div id="popup2" class="popup-box">
+							<img src="images/thumbs/Gladiator.png" alt="Image 2" />
+							<div class="text-box">
+								<h2>Hallo2</h2>
+								<p>Gladiator.</p>
+							</div>
+							<a class="popup-box-close" href="#">&times;</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+		
+		// Show popup with large image
+function showPopup(imageSrc) {
+	// Get the popup element
+	const popup = document.querySelector('.popup-box');
+	// Get the image element inside the popup
+	const popupImage = popup.querySelector('img');
+	// Set the source of the image to the clicked thumbnail's source
+	popupImage.src = imageSrc;
+	// Show the popup
+	if (popup !== null) {
+		popup.style.display = 'flex';
+	}
+}
+
+// Hide popup
+function hidePopup() {
+	// Get the popup element
+	const popup = document.querySelector('.popup-box');
+	// Hide the popup
+	if (popup !== null) {
+		popup.style.display = 'none';
+	}
+}
+
+// Attach click event listeners to all thumbnail images
+const thumbnailImages = document.querySelectorAll('.image-container img');
+for (let i = 0; i < thumbnailImages.length; i++) {
+	thumbnailImages[i].addEventListener('click', function() {
+		// Get the source of the clicked thumbnail
+		const imageSrc = this.getAttribute('src');
+		// Show the popup with the clicked thumbnail's image
+		showPopup(imageSrc);
+	});
+}
+
+// Attach click event listener to popup close button
+const popupCloseButton = document.querySelector('.popup-box-close');
+popupCloseButton.addEventListener('click', function(event) {
+	// Hide the popup
+	hidePopup();
+});
+
+	</script>
+</body>
+</html>
