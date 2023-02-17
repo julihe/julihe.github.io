@@ -6,134 +6,160 @@
 -->
 <html>
 	<head>
-		<a id="Contact me"></a>
 		<title>Juls Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			body {
+				background-image: url('images/fulls/background.png');
+				background-size: cover; /* Make the image cover the whole body */
+			}
+
+			.thumbnail-image {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.thumbnail-image img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.thumbnail-image.selected img {
+  object-fit: contain;
+  max-height: 100vh;
+  max-width: 100vw;
+  margin: auto;
+}
+		</style>
 	</head>
 	<body>
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-				
-					<header id="header">
-						
-						<span class="avatar"><img src="images/profile2.png" alt="" /></span>
-						<h1> <strong> Julia Heidrich - 3D Artist</strong></h1> <h2><p> Blender - Substance Painter - Photoshop - Unreal Engine - Unity</h2>
-						
-						<ul class="icons">
-							<li><a href="https://www.youtube.com/playlist?list=PLznTkZPZWx10cyj4QgZ2x5SCgyYMx1Pw4" class="icon style2 fa-youtube"><span class="label">Youtube</span></a></li>
-							<li><a href="#About-me" class="icon style2 fa-500px"><span class="label">About me</span></a></li>
-							<li><a href="#Contact-me" class="icon style2 fa-envelope-o"><span class="label">Contact</span></a></li>	
-							
-							 
-						</ul>
-						<p><p><p>
-						
-						<p>
-							
-					</header>
+			<!-- Header -->
+			<header id="header">
 
-				<!-- Main -->
-					<section id="main">
+				<span class="avatar"><img src="images/profile2.png" alt="" /></span>
+				<h1><strong>Julia Heidrich - 3D Artist</strong></h1>
+				<h2><p>Blender - Substance Painter - Photoshop - Unreal Engine - Unity</h2>
 
-						<!-- Thumbnails -->
-							<section class="thumbnails">
-								<div>
-									
-									<div class="box">
-										<a href="images/fulls/parasaurolophus2.png" class="image fit"><img src="images/thumbs/parasaurolophus.png"> </a>
-										<div class="inner">
-											<h3>Parasaurolophus</h3>
-											<p>A Parasaurolophus to go on hikes with. Sculpted/Modelled in Blender</p>
-											<a href="https://youtu.be/TQv14uZc7g4" class="button fit" data-poptrox="youtube,1000x600">Watch</a>
-										</div>
-									</div>	
+				<div id="thumbnails-container">
+					<div class="thumbnail-image selected" data-image="images/fulls/parasaurolophus2.png">
+						<img src="images/thumbs/parasaurolophus.png" alt="Parasaurolophus thumbnail">
+					</div>
+					<div class="thumbnail-image" data-image="images/fulls/tree2.png">
+						<img src="images/thumbs/tree.png" alt="Tree thumbnail">
+					</div>
+					<div class="thumbnail-image" data-image="images/fulls/bachelor.png">
+						<img src="images/thumbs/bachelor.png" alt="Leaving Earth Behind thumbnail">
+					</div>
 
-								</div>
+					<!-- Add a new thumbnail image -->
+					<div class="thumbnail-image" data-image="images/fulls/another-image.png">
+						<img src="images/thumbs/another-image.png" alt="Another Image thumbnail">
+					</div>
+				</div>
 
-								<div>
-
-									<div class="box">
-										<a href="images/fulls/tree2.png" class="image fit"><img src="images/thumbs/tree.png"> </a>
-										<div class="inner">
-											<h3>Bench under Tree</h3>
-											<p>A simple bench with flowers under a wheeping willow. Modells built, textured and rendered in Blender.</p>
-										</div>
-									</div>
-																	
-								</div>
-
-								<div>
-								
-									<div class="box">
-										<a href="images/fulls/bachelor.png" class="image fit"><img src="images/thumbs/bachelor.png"> </a>
-										<div class="inner">
-											<h3>Leaving Earth behind - VR Experience</h3>
-											<p>Bachelors project - We explore four civilisations on the Trappist-1 planetary system. Built in Unreal Engine 4, Blender and Substance Painter.</p>
-											<a href="https://youtu.be/KnPU3Y14yak" class="button fit" data-poptrox="youtube,1000x600">Gameplay</a>
-										</div>
-									</div>
-
-								</div>
-
-								
-								</section>
+				<ul class="icons">
+					<li><a href="https://www.youtube.com/playlist?list=PLznTkZPZWx10cyj4QgZ2x5SCgyYMx1Pw4" class="icon style2 fa-youtube"><span class="label">Youtube</span></a></li>
+					<li><a href="#About-me" class="icon style2 fa-500px"><span class="label">About me</span></a></li>
+					<li><a href="#Contact-me" class="icon style2 fa-envelope-o"><span class="label">Contact</span></a></li>
+				</ul>
+			</header>
 
 
+		<!-- Main -->
+		<div id="main">
 
-					</section>
-
-					
-
-				<!-- Footer -->
-				
-				<a id="About-me"></a> 
-
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="#Contact me" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
-						<div><a href="#Contact me">
-							<h1>About me</h1> 
-							</a>
-						</div>
-						 
-					</ul>
-				
-				
-					<h2> <p>Hi! <p>I'm a passionate 3D Artist. <p> I love telling stories especially through visuals.<p> For more details check out my Youtube page, linked above.<p> More projects are in the making, so don't hesitate to come back. <p> Thank you <3 </h2>
-
-				</footer>
-
-
-				
-				<a id="Contact-me"></a> 
-
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="#Contact me" class="icon style2 fa-envelope-o"><span class="label">Kontact</span></a></li>
-							<div><a href="#Contact me">
-								<h1>Contact me</h1> 
-								</a>
-							</div>
-							 
-						</ul>
-					
-					
-						<p><h2>Juls <p> Germany </h2>
-
-					</footer>
-
+			<!-- Fullscreen image container -->
+			<div id="fullscreen-image-container">
+				<img id="fullscreen-image" src="images/fulls/parasaurolophus2.png" alt="Selected Image" />
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/main.js"></script>
+		</div>
 
-	</body>
-</html>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				// Set up the click event for each thumbnail image
+				$('.thumbnail-image').click(function() {
+					// Change the selected class to the clicked image
+					$('.thumbnail-image.selected').removeClass('selected');
+					$(this).addClass('selected');
+					// Change the fullscreen image to the clicked image
+					var fullsized_image = $(this).data('image');
+					$('#fullscreen-image').attr('src', fullsized_image);
+				});
+			});
+		</script>
+
+
+<!-- About me -->
+<article id="About-me">
+	<h2 class="major">About me</h2>
+	<span class="image main"><img src="images/profile2.png" alt="" /></span>
+	<p>I'm a 3D artist based in Berlin, Germany. I specialize in creating 3D assets for games and interactive experiences using tools such as Blender, Substance Painter, and ZBrush. My goal is to create immersive and engaging experiences that leave a lasting impression on the viewer.</p>
+	<p>In my free time, I enjoy exploring the city, discovering new restaurants, and spending time with my cat, Mr. Whiskers.</p>
+</article>
+
+<!-- Contact me -->
+<article id="Contact-me">
+	<h2 class="major">Contact me</h2>
+	<form method="post" action="#">
+		<div class="field half first">
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name" />
+		</div>
+		<div class="field half">
+			<label for="email">Email</label>
+			<input type="text" name="email" id="email" />
+		</div>
+		<div class="field">
+			<label for="message">Message</label>
+			<textarea name="message" id="message" rows="4"></textarea>
+		</div>
+		<ul class="actions">
+			<li><input type="submit" value="Send Message" class="special" /></li>
+			<li><input type="reset" value="Reset" /></li>
+		</ul>
+	</form>
+	<ul class="icons">
+		<li><a href="#" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+		<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+		<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+	</ul>
+</article>
+
+<!-- Gallery -->
+<article>
+	<h2 class="major">Gallery</h2>
+	<div id="gallery-container">
+		<div class="gallery-image selected" data-image="images/fulls/parasaurolophus2.png">
+			<img src="images/fulls/parasaurolophus2.png" alt="Parasaurolophus">
+		</div>
+		<div class="gallery-image" data-image="images/fulls/parasaurolophus.png">
+			<img src="images/thumbs/parasaurolophus.png" alt="Parasaurolophus">
+		</div>
+		<div class="gallery-image" data-image="images/fulls/tree2.png">
+			<img src="images/thumbs/tree.png" alt="Tree">
+		</div>
+		<div class="gallery-image" data-image="images/fulls/tree.png">
+			<img src="images/thumbs/tree.png" alt="Tree">
+		</div>
+		<div class="gallery-image" data-image="images/fulls/bachelor.png">
+			<img src="images/thumbs/bachelor.png" alt="Leaving Earth Behind">
+		</div>
+		<div class="gallery-image" data-image="images/fulls/bachelor2.png">
+			<img src="images/thumbs/bachelor2.png" alt="Leaving>
+
+		</body>
+		</html>
