@@ -11,70 +11,108 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+		<style>
+			/* Popup box styles */
+			.popup-box {
+				position: fixed;
+				top: 0;
+				left: 0;
+				height: 100vh;
+				width: 100vw;
+				background-color: rgba(0, 0, 0, 0.8);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.popup-box img {
+				max-height: 90vh;
+				max-width: 90vw;
+			}
+
+			.popup-box-close {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				font-size: 32px;
+				color: #fff;
+				cursor: pointer;
+			}
+		</style>
 	</head>
 	<body>
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-				
-					<header id="header">
-						
-						<span class="avatar"><img src="images/profile2.png" alt="" /></span>
-						<h1> <strong> Julia Heidrich - 3D Artist</strong></h1> <h2><p> Blender - Substance Painter - Photoshop - Unreal Engine - Unity</h2>
-						
-						<ul class="icons">
-							<li><a href="https://www.youtube.com/playlist?list=PLznTkZPZWx10cyj4QgZ2x5SCgyYMx1Pw4" class="icon style2 fa-youtube"><span class="label">Youtube</span></a></li>
-							<li><a href="#About-me" class="icon style2 fa-500px"><span class="label">About me</span></a></li>
-							<li><a href="#Contact-me" class="icon style2 fa-envelope-o"><span class="label">Contact</span></a></li>	
-							
-							 
-						</ul>
-						<p><p><p>
-						
-						<p>
-							
-					</header>
+			<!-- Header -->
+			<header id="header">
 
-				<!-- Main -->
-				<section id="main">
-					<div id="fancybox-wrapper">
-					  <section class="thumbnails" data-fancybox="gallery">
-						<div>
-						  <div class="box">
-							<a href="images/fulls/parasaurolophus2.png" class="image fit" data-src="images/fulls/parasaurolophus2.png" data-fancybox="gallery"><img src="images/thumbs/parasaurolophus.png" /></a>
+				<span class="avatar"><img src="images/profile2.png" alt="" /></span>
+				<h1> <strong> Julia Heidrich - 3D Artist</strong></h1>
+				<h2>
+					<p> Blender - Substance Painter - Photoshop - Unreal Engine - Unity</p>
+				</h2>
+
+				<ul class="icons">
+					<li><a href="https://www.youtube.com/playlist?list=PLznTkZPZWx10cyj4QgZ2x5SCgyYMx1Pw4" class="icon style2 fa-youtube"><span class="label">Youtube</span></a></li>
+					<li><a href="#About-me" class="icon style2 fa-500px"><span class="label">About me</span></a></li>
+					<li><a href="#Contact-me" class="icon style2 fa-envelope-o"><span class="label">Contact</span></a></li>
+				</ul>
+				<p><p><p>
+
+				<p>
+
+			</header>
+
+			<!-- Main -->
+			<section id="main">
+
+				<!-- Thumbnails -->
+				<section class="thumbnails">
+					<div>
+
+						<div class="box">
+							<a href="images/fulls/parasaurolophus2.png" class="image fit"><img src="images/thumbs/parasaurolophus.png"></a>
 							<div class="inner">
-							  <h3>Parasaurolophus</h3>
-							  <p>A Parasaurolophus to go on hikes with. Sculpted/Modelled in Blender</p>
-							  <a href="https://youtu.be/TQv14uZc7g4" class="button fit" data-poptrox="youtube,1000x600">Watch</a>
+								<h3>Parasaurolophus</h3>
+								<p>A Parasaurolophus to go on hikes with. Sculpted/Modelled in Blender</p>
+								<a href="https://youtu.be/TQv14uZc7g4" class="button fit" data-poptrox="youtube,1000x600">Watch</a>
 							</div>
-						  </div>
 						</div>
-						<div>
-						  <div class="box">
-							<a href="images/fulls/tree2.png" class="image fit" data-src="images/fulls/tree2.png" data-fancybox="gallery"><img src="images/thumbs/tree.png" /></a>
-							<div class="inner">
-							  <h3>Bench under Tree</h3>
-							  <p>A simple bench with flowers under a wheeping willow. Modells built, textured and rendered in Blender.</p>
-							</div>
-						  </div>
-						</div>
-						<div>
-						  <div class="box">
-							<a href="images/fulls/bachelor.png" class="image fit" data-src="images/fulls/bachelor.png" data-fancybox="gallery"><img src="images/thumbs/bachelor.png" /></a>
-							<div class="inner">
-							  <h3>Leaving Earth behind - VR Experience</h3>
-							  <p>Bachelors project - We explore four civilisations on the Trappist-1 planetary system. Built in Unreal Engine 4, Blender and Substance Painter.</p>
-							  <a href="https://youtu.be/KnPU3Y14yak" class="button fit" data-poptrox="youtube,1000x600">Gameplay</a>
-							</div>
-						  </div>
-						</div>
-					  </section>
+
 					</div>
+
+					<div>
+
+						<div class="box">
+							<a href="images/fulls/parasaurolophus2.png" class="image fit"><img src="images/thumbs/parasaurolophus.png"></a>
+							<div class="inner">
+								<h3>Parasaurolophus</h3>
+								<p>A Parasaurolophus to go on hikes with. Sculpted/Modelled in Blender</p>
+								<a href="https://youtu.be/TQv14uZc7g4" class="button fit" data-poptrox="youtube,1000x600">Watch</a>
+							</div>
+						</div>
+
+					</div>
+
+					<div>
+
+						<div class="box">
+							<a href="images/fulls/parasaurolophus2.png" class="image fit"><img src="images/thumbs/parasaurolophus.png"></a>
+							<div class="inner">
+								<h3>Parasaurolophus</h3>
+								<p>A Parasaurolophus to go on hikes with. Sculpted/Modelled in Blender</p>
+								<a href="https://youtu.be/TQv14uZc7g4" class="button fit" data-poptrox="youtube,1000x600">Watch</a>
+							</div>
+						</div>
+
+					</div>
+
 				  </section>
+
+
+				  
 				  
 
 					
