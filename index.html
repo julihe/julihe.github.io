@@ -6,7 +6,6 @@
 -->
 <html>
 	<head>
-		<a id="Contact me"></a>
 		<title>Juls Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,6 +22,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				overflow: hidden;
 			}
 
 			.popup-box img {
@@ -38,6 +38,8 @@
 				color: #fff;
 				cursor: pointer;
 			}
+
+            /* Text box styles */
             .text-box {
                 position: absolute;
                 right: 0;
@@ -50,106 +52,100 @@
                 padding: 2em;
                 color: #fff;
             }
+
+            /* Image container styles */
+            .image-container {
+                position: relative;
+            }
+
+            .image-container .text-box {
+                display: none;
+            }
+
+            .image-container:hover .text-box {
+                display: block;
+            }
 		</style>
 	</head>
 	<body>
-
-		<!-- Wrapper -->
-		<div id="wrapper">
-
-			<!-- Header -->
-			<header id="header">
-
-				<span class="avatar"><img src="images/profile2.png" alt="" /></span>
-				<h1> <strong> Julia Heidrich - 3D Artist</strong></h1>
-				<h2>
-					<p> Blender - Substance Painter - Photoshop - Unreal Engine - Unity</p>
-				</h2>
-
-				<ul class="icons">
-					<li><a href="https://www.youtube.com/playlist?list=PLznTkZPZWx10cyj4QgZ2x5SCgyYMx1Pw4" class="icon style2 fa-youtube"><span class="label">Youtube</span></a></li>
-					<li><a href="#About-me" class="icon style2 fa-500px"><span class="label">About me</span></a></li>
-					<li><a href="#Contact-me" class="icon style2 fa-envelope-o"><span class="label">Contact</span></a></li>
-				</ul>
-
-			</header>
-
-			<!-- Main -->
-			<section id="main">
-
-				<!-- Thumbnails -->
-				<section class="thumbnails">
-					<div>
-
-						<div class="box">
-							<a href="images/fulls/parasaurolophus2.png" class="image fit"><img src="images/thumbs/Tarot XV.png"></a>
-							<div class="inner">
-								<h3>Parasaurolophus</h3> <img src="images/fulls/Tarot V.png" class="image fit">
-								<p>A Parasaurolophus model I made in Blender.</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="image-container">
+						<a href="#popup1">
+							<img src="assets/images/thumbnail1.jpg" alt="Thumbnail 1" />
+						</a>
+						<div id="popup1" class="popup-box">
+							<img src="assets/images/image1.jpg" alt="Image 1" />
+							<div class="text-box">
+								<h2>Image 1</h2>
+								<p>This is a description of Image 1.</p>
 							</div>
+							<a class="popup-box-close" href="#">&times;</a>
 						</div>
 					</div>
-					<div>
-						<div class="box">
-							<a href="images/fulls/Archimboldi Pharao.png" class="image fit"><img src="images/fulls/parasaurolophus.png" class="image fit"><img src="images/thumbs/bachelor.png"></a>
-							<div class="inner">
-								<h3>Jupiter</h3> <img src="images/fulls/parasaurolophus.png" class="image fit">
-								<p>A planet I created in Blender.</p>
+				</div>
+				<div class="col-md-4">
+					<div class="image-container">
+						<a href="#popup2">
+							<img src="assets/images/thumbnail2.jpg" alt="Thumbnail 2" />
+						</a>
+						<div id="popup2" class="popup-box">
+							<img src="assets/images/image2.jpg" alt="Image 2" />
+							<div class="text-box">
+								<h2>Image 2</h2>
+								<p>This is a description of Image 2.</p>
 							</div>
+							<a class="popup-box-close" href="#">&times;</a>
 						</div>
 					</div>
-					<div>
-						<div class="box">
-							<a href="images/fulls/Houston.png" class="image fit"><img src="images/fulls/Gladiator.png" class="image fit"><img src="images/thumbs/Stuck in a loop.png"></a>
-							<div class="inner">
-								<h3>Rubik's Cube</h3>
-								<p>A 3D model of a Rubik's Cube.</p>
-							</div>
-						</div>
-					</div>
-				</section>
-	
-			</section>
-	
-			<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="https://www.linkedin.com/in/julia-heidrich-803b0512a/" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					<li><a href="https://www.artstation.com/juliaheidrich" class="icon style2 fa-artstation"><span class="label">Artstation</span></a></li>
-					<li><a href="https://www.instagram.com/juliaheidrich_art/" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-				</ul>
-			</footer>
-	
-		</div>
-	
-		<!-- Popup box -->
-		<div class="popup-box">
-			<img class="popup-image">
-			<div class="text-box">
-				<h2>Some Text</h2> <img src="images/fulls/Gladiator.png" class="image fit">
+				</div>
 			</div>
-			<div class="popup-box-close">&#10005;</div>
 		</div>
-	
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.poptrox.min.js"></script>
-		<script src="assets/js/skel.min.js"></script>
-		<script src="assets/js/main.js"></script>
 		<script>
-			// Popup image
-			$('.thumbnails a').click(function(e) {
-				e.preventDefault();
-				$('.popup-box').fadeIn();
-				$('.popup-box img').attr('src', $(this).attr('href'));
-				$('.popup-box .text-box h2').text($(this).siblings('.inner').children('h3').text());
-			});
-	
-			// Close popup
-			$('.popup-box-close').click(function() {
-				$('.popup-box').fadeOut();
-			});
-		</script>
-	
-	</body>
-	</html>
+		
+		// Show popup with large image
+function showPopup(imageSrc) {
+	// Get the popup element
+	const popup = document.querySelector('.popup-box');
+	// Get the image element inside the popup
+	const popupImage = popup.querySelector('img');
+	// Set the source of the image to the clicked thumbnail's source
+	popupImage.src = imageSrc;
+	// Show the popup
+	if (popup !== null) {
+		popup.style.display = 'flex';
+	}
+}
+
+// Hide popup
+function hidePopup() {
+	// Get the popup element
+	const popup = document.querySelector('.popup-box');
+	// Hide the popup
+	if (popup !== null) {
+		popup.style.display = 'none';
+	}
+}
+
+// Attach click event listeners to all thumbnail images
+const thumbnailImages = document.querySelectorAll('.image-container img');
+for (let i = 0; i < thumbnailImages.length; i++) {
+	thumbnailImages[i].addEventListener('click', function() {
+		// Get the source of the clicked thumbnail
+		const imageSrc = this.getAttribute('src');
+		// Show the popup with the clicked thumbnail's image
+		showPopup(imageSrc);
+	});
+}
+
+// Attach click event listener to popup close button
+const popupCloseButton = document.querySelector('.popup-box-close');
+popupCloseButton.addEventListener('click', function(event) {
+	// Hide the popup
+	hidePopup();
+});
+
+	</script>
+</body>
+</html>

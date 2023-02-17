@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<!--
+	Visualize by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<a id="Contact me"></a>
+		<title>Juls Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Popup box styles */
+			.popup-box {
+				position: fixed;
+				top: 0;
+				left: 0;
+				height: 100vh;
+				width: 100vw;
+				background-color: rgba(0, 0, 0, 0.8);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.popup-box img {
+				max-height: 90vh;
+				max-width: 90vw;
+			}
+
+			.popup-box-close {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				font-size: 32px;
+				color: #fff;
+				cursor: pointer;
+			}
+            .text-box {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2em;
+                color: #fff;
+            }
+		</style>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+
+				<span class="avatar"><img src="images/profile2.png" alt="" /></span>
+				<h1> <strong> Julia Heidrich - 3D Artist</strong></h1>
+				<h2>
+					<p> Blender - Substance Painter - Photoshop - Unreal Engine - Unity</p>
+				</h2>
+
+				<ul class="icons">
+					<li><a href="https://www.youtube.com/playlist?list=PLznTkZPZWx10cyj4QgZ2x5SCgyYMx1Pw4" class="icon style2 fa-youtube"><span class="label">Youtube</span></a></li>
+					<li><a href="#About-me" class="icon style2 fa-500px"><span class="label">About me</span></a></li>
+					<li><a href="#Contact-me" class="icon style2 fa-envelope-o"><span class="label">Contact</span></a></li>
+				</ul>
+
+			</header>
+
+			<!-- Main -->
+			<section id="main">
+
+				<!-- Thumbnails -->
+				<section class="thumbnails">
+					<div>
+
+						<div class="box">
+							<a href="images/fulls/parasaurolophus2.png" class="image fit"><img src="images/thumbs/Tarot XV.png"></a>
+							<div class="inner">
+								<h3>Parasaurolophus</h3>
+								<p>A Parasaurolophus model I made in Blender.</p>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="box">
+							<a href="images/fulls/Archimboldi Pharao.png" class="image fit"><img src="images/fulls/parasaurolophus.png" class="image fit"><img src="images/thumbs/bachelor.png"></a>
+							<div class="inner">
+								<h3>Jupiter</h3>
+								<p>A planet I created in Blender.</p>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="box">
+							<a href="images/fulls/Houston.png" class="image fit"><img src="images/fulls/Gladiator.png" class="image fit"><img src="images/thumbs/Stuck in a loop.png"></a>
+							<div class="inner">
+								<h3>Rubik's Cube</h3>
+								<p>A 3D model of a Rubik's Cube.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+	
+			</section>
+	
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/julia-heidrich-803b0512a/" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.artstation.com/juliaheidrich" class="icon style2 fa-artstation"><span class="label">Artstation</span></a></li>
+					<li><a href="https://www.instagram.com/juliaheidrich_art/" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+				</ul>
+			</footer>
+	
+		</div>
+	
+		<!-- Popup box -->
+		<div class="popup-box">
+			<img class="popup-image">
+			<div class="text-box">
+				<h2>Some Text</h2>
+			</div>
+			<div class="popup-box-close">&#10005;</div>
+		</div>
+	
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			// Popup image
+			$('.thumbnails a').click(function(e) {
+				e.preventDefault();
+				$('.popup-box').fadeIn();
+				$('.popup-box img').attr('src', $(this).attr('href'));
+				$('.popup-box .text-box h2').text($(this).siblings('.inner').children('h3').text());
+			});
+	
+			// Close popup
+			$('.popup-box-close').click(function() {
+				$('.popup-box').fadeOut();
+			});
+		</script>
+	
+	</body>
+	</html>
