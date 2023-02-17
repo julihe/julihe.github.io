@@ -11,6 +11,57 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style> 
+		.enlarged-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+.enlarged {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+  flex-basis: calc(33.33% - 10px);
+  margin-bottom: 20px;
+}
+		</style>
+        <script>
+            function enlargeImage(event) {
+  const clickedImage = event.target;
+  const enlargedImage = document.createElement('img');
+  enlargedImage.src = clickedImage.src;
+  enlargedImage.classList.add('enlarged');
+
+  const enlargedContainer = document.createElement('div');
+  enlargedContainer.classList.add('enlarged-container');
+  enlargedContainer.appendChild(enlargedImage);
+  document.body.appendChild(enlargedContainer);
+
+  enlargedContainer.addEventListener('click', function() {
+    document.body.removeChild(enlargedContainer);
+  });
+}
+        </script>
 	</head>
 	<body>
 
@@ -48,17 +99,28 @@
 										<a href="images/fulls/parasaurolophus2.png" class="image fit"><img src="images/thumbs/parasaurolophus.png"> </a>
 										<div class="inner">
 											<h3>Parasaurolophus</h3>
-											<p>A Parasaurolophus to go on hikes with. Sculpted/Modelled in Blender</p>
-											<a href="https://youtu.be/TQv14uZc7g4" class="button fit" data-poptrox="youtube,1000x600">Watch</a>
+											<p>A Parasaurolophus to go on hikes with. Sculpted/Modeled in Blender</p>
 										</div>
 									</div>	
+
+									
+                                    <div class="image-container">
+                                        <img src="path/to/juzo_pic.jpg" alt="Image 1">
+                                        <img src="path/to/Pompeji.jpg" alt="Image 2">
+                                        <img src="path/to/gladiator.jpg" alt="Image 3">
+                                      </div>
+
+
+
+
+
 
 
 									<div class="box">
 										<a href="images/fulls/juzo_pic.png" class="image fit"><img src="images/thumbs/juzo_pic.png"> </a>
 										<div class="inner">
 											<h3>Character Animation Reel</h3>
-											<p>With Characters modelled, rigged and animated in Blender, this Reel shows some of my Character animations.</p>
+											<p>With Characters modeled, rigged and animated in Blender, this Reel shows some of my Character animations.</p>
 											<a href="https://youtu.be/TQv14uZc7g4" class="button fit" data-poptrox="youtube,1000x600">Watch</a>
 										</div>
 									</div>	
